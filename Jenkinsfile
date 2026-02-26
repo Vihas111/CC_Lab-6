@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout SCM') {
-            steps {
-                git 'https://github.com/Vihas111/CC_Lab-6.git'
-            }
-        }
-
         stage('Build Backend Image') {
             steps {
                 sh 'docker build -t backend-app backend'
